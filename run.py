@@ -84,6 +84,7 @@ def get_output():
                print(10*'*')
             else :
                 print("Test Case " + str(idx) + " Differs from expected ") 
+                print(10*'*')
             idx = idx + 1
 
  
