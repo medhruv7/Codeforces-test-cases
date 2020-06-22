@@ -1,6 +1,6 @@
 # Codeforces-test-cases
 
-After Cloning run pip install requirements.txt
+After Cloning run pip or pip3 install requirements.txt
 
 
 Made this to avoid copy pasting the test cases and validating them one by one when we have python at our disposal.
