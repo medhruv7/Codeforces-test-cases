@@ -64,6 +64,14 @@ def get_output():
     # Validation of test cases
     for r,d,f in os.walk('./Input'):
         for file in f:
+            print("Test Case " + str(idx + 1))
+            print(20*'-')
+            print("Input")
+            input_file_path = './Input/test_case' + str(idx)
+            with open(input_file_path) as fl:
+                input_lines = fl.readlines()
+            for line in input_lines:
+                print(line)
             command = "cat ./Input/" + file + " | ./a > output_expected.txt"
             os.system(command)
             with open('output_expected.txt','r') as file:
@@ -78,6 +86,7 @@ def get_output():
             for line in lines :
                 print(line)
             output_path = './Output/test_case' + str(idx)
+            print()
             print(10*'*')
             if filecmp.cmp(output_path,'output_expected.txt') == True:
                print("Test Case " + str(idx) + " Passed ")
@@ -85,6 +94,9 @@ def get_output():
             else :
                 print("Test Case " + str(idx) + " Differs from expected ") 
                 print(10*'*')
+            print()
+            print(20*'-')
+            print()
             idx = idx + 1
 
  
